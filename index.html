@@ -7,6 +7,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Важно для корректных расчетов ширины */
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -15,6 +21,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden; /* Скрывает горизонтальный скролл */
         }
 
         /* Первая страница (оригинальная версия) */
@@ -163,25 +170,10 @@
             gap: 20px;
         }
 
-        .maps-column {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: flex-start;
-        }
-
         .third-main-image {
             width: 300px;
             height: 300px;
             object-fit: cover;
-        }
-
-        .yandex-map {
-            width: 150px;
-            height: 150px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
         }
 
         .third-details {
@@ -235,7 +227,7 @@
         .timeline {
             display: flex;
             justify-content: space-between;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
@@ -264,7 +256,7 @@
         }
 
         .timeline-text {
-            margin-top: 25px;
+            margin-top: 15px;
             text-align: center;
             font-size: 1.3rem;
             color: #2a2828;
@@ -318,7 +310,6 @@
             width: 250px;
             height: 350px;
             object-fit: cover;
-            border-radius: 10px;
             flex-shrink: 0;
         }
 
@@ -403,7 +394,6 @@
             width: 250px;
             height: 400px;
             object-fit: cover;
-            border-radius: 10px;
             margin-left: 150px; /* Было 600px, уменьшили на 100px */
             margin-top: -20px; /* Было -100px, увеличили на 80px */
         }
@@ -412,8 +402,8 @@
         .final-section {
             width: 100%;
             max-width: 900px;
-            padding: 0 20px;
-            margin: 100px auto 200px; /* Отступ сверху 150px */
+            padding: 0;
+            margin: 50px auto 100px; /* Отступ сверху 150px */
             text-align: center;
         }
 
@@ -439,12 +429,10 @@
 
         .final-message::before {
             right: 100%;
-            margin-right: 10px;
         }
 
         .final-message::after {
             left: 100%;
-            margin-left: 10px;
         }
 
 
@@ -497,18 +485,6 @@
                 aspect-ratio: 1/1;
                 order: 1;
                 margin-left: 0;
-            }
-
-            .maps-column {
-                width: 100%;
-                align-items: center;
-                order: 2;
-            }
-
-            .yandex-map {
-                width: 200px;
-                height: 200px;
-                margin-top: 10px;
             }
 
             .third-details {
@@ -599,7 +575,7 @@
 
             .final-message::before,
             .final-message::after {
-                width: 50px;
+                width: 35px;
             }
         }
     </style>
@@ -767,7 +743,7 @@
 
 <!-- Финальная страница -->
 <div class="final-section">
-    <div class="final-message">Будем рады видеть Вас!</div>
+    <div class="final-message">Будем рады видеть Вас!  </div>
 </div>
 </body>
 </html>
